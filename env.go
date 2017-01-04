@@ -11,7 +11,7 @@ import (
 // envs a map stores all key-value pairs in .env file
 var envs map[string]string
 
-// LoadEnvs loads .env file into envs
+// LoadEnvs loads .env file
 func LoadEnvs(path string) {
 	// clean envs
 	envs = map[string]string{}
