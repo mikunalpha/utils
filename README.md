@@ -62,11 +62,18 @@ func (sopi SliceOfPtrInt) InSlice(t int) bool {}
 func GetRequestBody(r *http.Request) []byte {}
 ```
 
-### Get env variable or from file
+### Get variable from ENV or from file
 ```Go
 func LoadEnvs(path string) {}
 func EnvString(key string, spare string) string {}
 func EnvBool(key string, spare bool) bool {}
 func EnvInt(key string, spare int64) int64 {}
 func EnvFloat(key string, spare float64) float64 {}
+```
+The file format as below:
+```
+VAR1=abc
+VAR2=true
+VAR3=10
+VAR4=1.5
 ```
