@@ -3,6 +3,7 @@
 ### Get new ptr of common type
 ```Go
 func NewPtrString(s string) *string {}
+func NewPtrBool(s bool) *bool {}
 func NewPtrInt(i int) *int {}
 func NewPtrInt8(i int8) *int8 {}
 func NewPtrInt16(i int16) *int16 {}
@@ -22,6 +23,18 @@ func NewPtrFloat64(f float64) *float64 {}
 type SliceOfString []string
 func (sos SliceOfString) Unique() []string {}
 func (sos SliceOfString) InSlice(t string) bool {}
+
+type SliceOfPtrString []*string
+func (sos SliceOfPtrString) Unique() []*string {}
+func (sos SliceOfPtrString) InSlice(t string) bool {}
+
+type SliceOfBool []bool
+func (sos SliceOfBool) Unique() []bool {}
+func (sos SliceOfBool) InSlice(t bool) bool {}
+
+type SliceOfPtrBool []*bool
+func (sos SliceOfPtrBool) Unique() []*bool {}
+func (sos SliceOfPtrBool) InSlice(t bool) bool {}
 
 type SliceOfInt []int
 func (soi SliceOfInt) Unique() []int {}
