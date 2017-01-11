@@ -6,20 +6,6 @@ func NewPtrString(s string) *string {
 
 type SliceOfString []string
 
-// func (sos SliceOfString) First(d string) string {
-// 	if len(sos) != 0 {
-// 		return sos[0]
-// 	}
-// 	return d
-// }
-
-// func (sos SliceOfString) Last(d string) string {
-// 	if len(sos) != 0 {
-// 		return sos[len(sos)-1]
-// 	}
-// 	return d
-// }
-
 func (sos SliceOfString) Unique() []string {
 	mos := map[string]bool{}
 	for _, s := range sos {
@@ -45,20 +31,6 @@ func (sos SliceOfString) InSlice(t string) bool {
 }
 
 type SliceOfPtrString []*string
-
-// func (sops SliceOfPtrString) First(d string) *string {
-// 	if len(sops) != 0 {
-// 		return sops[0]
-// 	}
-// 	return &d
-// }
-
-// func (sops SliceOfPtrString) Last(d string) *string {
-// 	if len(sops) != 0 {
-// 		return sops[len(sops)-1]
-// 	}
-// 	return &d
-// }
 
 func (sops SliceOfPtrString) Unique() []*string {
 	mos := map[string]bool{}
